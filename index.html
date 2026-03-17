@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>况婷 | 品牌宣传 & 文案策划作品集</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans SC', sans-serif;
+            scroll-behavior: smooth;
+            background-color: #f8fafc;
+        }
+        
+        .hero-section {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+            overflow: hidden;
+        }
+
+        .hero-bg-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('images/hero-bg.jpg');
+            background-size: cover;
+            background-position: center;
+            z-index: 1;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to right, rgba(15, 23, 42, 0.9) 0%, rgba(15, 23, 42, 0.4) 100%);
+            z-index: 2;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 3;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.8s ease-out;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .skill-tag {
+            transition: all 0.3s ease;
+        }
+
+        .skill-tag:hover {
+            transform: scale(1.05);
+            background-color: #3b82f6;
+            color: white;
+        }
+
+        .project-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .project-container:hover .project-img {
+            transform: scale(1.1);
+        }
+
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+</head>
+<body class="text-slate-800">
+
+    <nav class="fixed w-full z-50 bg-white/80 backdrop-blur-md shadow-sm">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-xl font-bold tracking-tighter text-blue-600">TING.KUANG</div>
+            <div class="hidden md:flex space-x-8 text-sm font-medium">
+                <a href="#home" class="hover:text-blue-600 transition">首页</a>
+                <a href="#about" class="hover:text-blue-600 transition">关于</a>
+                <a href="#projects" class="hover:text-blue-600 transition">核心案例</a>
+                <a href="#skills" class="hover:text-blue-600 transition">技能矩阵</a>
+                <a href="#contact" class="hover:text-blue-600 transition text-blue-600 border border-blue-600 px-4 py-1 rounded-full hover:bg-blue-600 hover:text-white">联系我</a>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="hero-section">
+        <div class="hero-bg-image"></div>
+        <div class="hero-overlay"></div>
+        <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center hero-content w-full">
+            <div class="text-white space-y-6">
+                <h2 class="text-blue-400 font-bold tracking-widest uppercase text-sm md:text-base">Brand Communications Specialist</h2>
+                <h1 class="text-4xl md:text-7xl font-bold leading-tight">
+                    用文字构建逻辑<br><span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400">用视觉触达情绪</span>
+                </h1>
+                <p class="text-slate-300 text-lg max-w-lg leading-relaxed">
+                    哈喽你好👋我是况婷，一名拥有 7 年经验的品牌宣传者，我深信优秀的品牌宣传应是“文学底蕴”与“高阶执行”的完美平衡。
+                </p>
+                <div class="flex space-x-4">
+                    <a href="#projects" class="bg-blue-600 hover:bg-blue-700 text-white px-6 md:px-8 py-3 rounded-lg font-bold transition shadow-lg shadow-blue-500/30">浏览作品案例</a>
+                    <a href="#skills" class="bg-white/10 hover:bg-white/20 text-white px-6 md:px-8 py-3 rounded-lg font-bold transition backdrop-blur-sm">技能栈</a>
+                </div>
+            </div>
+            
+            <div class="hidden md:block relative">
+                <div class="w-80 h-[500px] mx-auto rounded-3xl border border-white/20 overflow-hidden glass-card relative">
+                    <img src="images/avatar.jpg" alt="况婷个人照" class="w-full h-full object-cover" onerror="this.src='https://via.placeholder.com/400x600?text=Avatar'">
+                    </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-24 bg-white">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid md:grid-cols-3 gap-16 items-center">
+                <div class="reveal">
+                    <h3 class="text-3xl font-bold mb-6 border-l-4 border-blue-600 pl-4">关于我</h3>
+                    <p class="text-slate-600 leading-relaxed mb-6">
+                        毕业于江西水利电力大学汉语言文学专业.从政务宣传起步，在互联网平台上海钢联锤炼内容深度，后在半导体领域芯控源电子负责品牌价值体系的搭建。
+                    </p>
+                    <div class="space-y-4 text-sm md:text-base">
+                        <div class="flex items-center space-x-3 text-slate-700">
+                            <i data-lucide="award" class="text-blue-600" size="20"></i>
+                            <span class="font-medium">大学生英语竞赛专业排名第一</span>
+                        </div>
+                        <div class="flex items-center space-x-3 text-slate-700">
+                            <i data-lucide="trending-up" class="text-blue-600" size="20"></i>
+                            <span class="font-medium">7年全链路品牌传播经验</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-6 reveal">
+                    <div class="p-8 bg-slate-50 rounded-2xl border border-slate-100 hover:shadow-xl transition group">
+                        <h4 class="font-bold text-xl mb-3 text-blue-600 group-hover:scale-105 transition-transform origin-left">内容深度</h4>
+                        <p class="text-sm text-slate-500 leading-relaxed text-justify">从品牌故事、人物专访到专业深度稿件，擅长将复杂逻辑转化为动人叙事。</p>
+                    </div>
+                    <div class="p-8 bg-slate-50 rounded-2xl border border-slate-100 hover:shadow-xl transition group">
+                        <h4 class="font-bold text-xl mb-3 text-emerald-600 group-hover:scale-105 transition-transform origin-left">视觉升维</h4>
+                        <p class="text-sm text-slate-500导致过relaxed text-justify">掌握 Blender 3D 建模、AE 动效及平面全家桶，打破策划与执行的边界。</p>
+                    </div>
+                    <div class="p-8 bg-slate-50 rounded-2xl border border-slate-100 hover:shadow-xl transition group">
+                        <h4 class="font-bold text-xl mb-3 text-orange-600 group-hover:scale-105 transition-transform origin-left">整合营销</h4>
+                        <p class="text-sm text-slate-500 leading-relaxed text-justify">统筹宣传片、官网、展会及社交媒体，确保品牌在全触点的一致性表达。</p>
+                    </div>
+                    <div class="p-8 bg-slate-50 rounded-2xl border border-slate-100 hover:shadow-xl transition group">
+                        <h4 class="font-bold text-xl mb-3 text-purple-600 group-hover:scale-105 transition-transform origin-left">敏锐洞察</h4>
+                        <p class="text-sm text-slate-500 leading-relaxed text-justify">政务宣传背景带来的高度严谨度与敏锐的社会/行业趋势洞察力。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="py-24 bg-slate-50">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-16 reveal">
+                <h3 class="text-4xl font-bold mb-4 italic text-slate-900">核心案例展示</h3>
+                <p class="text-slate-500">每一个项目都是策略与执行的深度融合</p>
+            </div>
+
+            <div class="space-y-24">
+                <div class="flex flex-col md:flex-row gap-12 items-center reveal group/card cursor-pointer" onclick="openModal('modal-xky')">
+                    <div class="md:w-1/2 project-container overflow-hidden rounded-2xl shadow-2xl h-80 bg-slate-200">
+                        <img src="images/project-xin-kong-yuan.jpg" alt="芯控源项目" class="project-img" onerror="this.src='https://via.placeholder.com/800x450?text=XinKongYuan+Project'">
+                    </div>
+                    <div class="md:w-1/2 space-y-4">
+                        <div class="inline-block px-3 py-1 bg-blue-100 text-blue-600 text-xs font-bold rounded-full">电子科技 · 品牌重塑</div>
+                        <h4 class="text-2xl font-bold group-hover/card:text-blue-600 transition flex items-center">
+                            芯控源品牌价值体系梳理
+                            <i data-lucide="arrow-up-right" class="ml-2 opacity-0 group-hover/card:opacity-100 transition" size="20"></i>
+                        </h4>
+                        <p class="text-slate-600 leading-relaxed text-justify">
+                            针对科技企业内容枯燥的痛点，重新梳理底层逻辑，将硬件指标转化为具有“情绪共鸣”的品牌语言。
+                        </p>
+                        <div class="flex flex-wrap gap-2 pt-2 text-xs text-slate-500">
+                            <span class="bg-white border px-2 py-1 rounded shadow-sm">年度传播主题</span>
+                            <span class="bg-white border px-2 py-1 rounded shadow-sm">3D视觉协同</span>
+                            <span class="bg-white border px-2 py-1 rounded shadow-sm">宣传片脚本</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex flex-col md:flex-row-reverse gap-12 items-center reveal group/card cursor-pointer" onclick="openModal('modal-mysteel')">
+                    <div class="md:w-1/2 project-container overflow-hidden rounded-2xl shadow-2xl h-80 bg-slate-200">
+                        <img src="images/project-mysteel.jpg" alt="上海钢联项目" class="project-img" onerror="this.src='https://via.placeholder.com/800x450?text=Mysteel+Project'">
+                    </div>
+                    <div class="md:w-1/2 space-y-4">
+                        <div class="inline-block px-3 py-1 bg-emerald-100 text-emerald-600 text-xs font-bold rounded-full">产业互联网 · 组织传播</div>
+                        <h4 class="text-2xl font-bold group-hover/card:text-emerald-600 transition flex items-center">
+                            Mysteel 组织传播与文化输出
+                            <i data-lucide="arrow-up-right" class="ml-2 opacity-0 group-hover/card:opacity-100 transition" size="20"></i>
+                        </h4>
+                        <p class="text-slate-600 leading-relaxed text-justify">
+                            通过深度专访和高质量内刊选题，提升了大型组织活动的内容传播与行业文化软实力。负责公共关系对接与全媒体矩阵内容创作。
+                        </p>
+                        <div class="flex flex-wrap gap-2 pt-2 text-xs text-slate-500">
+                            <span class="bg-white border px-2 py-1 rounded shadow-sm">深度报道</span>
+                            <span class="bg-white border px-2 py-1 rounded shadow-sm">新媒体运营</span>
+                            <span class="bg-white border px-2 py-1 rounded shadow-sm">视觉素材采集</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex flex-col md:flex-row gap-12 items-center reveal group/card cursor-pointer" onclick="openModal('modal-gaoan')">
+                    <div class="md:w-1/2 project-container overflow-hidden rounded-2xl shadow-2xl h-80 bg-slate-200">
+                        <img src="images/project-government.jpg" alt="宣传部项目" class="project-img" onerror="this.src='https://via.placeholder.com/800x450?text=Government+Project'">
+                    </div>
+                    <div class="md:w-1/2 space-y-4">
+                        <div class="inline-block px-3 py-1 bg-red-100 text-red-600 text-xs font-bold rounded-full">政务宣传 · 融媒体</div>
+                        <h4 class="text-2xl font-bold group-hover/card:text-red-600 transition flex items-center">
+                            高安市级宣传与媒体沟通
+                            <i data-lucide="arrow-up-right" class="ml-2 opacity-0 group-hover/card:opacity-100 transition" size="20"></i>
+                        </h4>
+                        <p class="text-slate-600 leading-relaxed text-justify">
+                            在市委宣传部期间，负责参与统筹融媒体内容，策划多项专题访谈。通过多维媒介整合，有效提升了政务信息的社会传播影响力。
+                        </p>
+                        <div class="flex flex-wrap gap-2 pt-2 text-xs text-slate-500">
+                            <span class="bg-white border px-2 py-1 rounded shadow-sm">新闻采编</span>
+                            <span class="bg-white border px-2 py-1 rounded shadow-sm">融媒体运营</span>
+                            <span class="bg-white border px-2 py-1 rounded shadow-sm">外宣对接</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="py-24 bg-white">
+        <div class="max-w-6xl mx-auto px-6 text-center mb-16 reveal">
+            <h3 class="text-4xl font-bold mb-4">技能矩阵</h3>
+            <p class="text-slate-500">文案为核，视觉为翼，多维赋能品牌传播</p>
+        </div>
+        <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div class="space-y-4 reveal">
+                <h5 class="font-bold flex items-center space-x-2 text-slate-900 border-b pb-2">
+                    <i data-lucide="pen-tool" size="18" class="text-blue-600"></i><span>内容与策略</span>
+                </h5>
+                <div class="flex flex-wrap gap-2 text-xs">
+                    <span class="skill-tag px-3 py-1 bg-slate-100 rounded-lg">品牌叙事</span>
+                    <span class="skill-tag px-3 py-1 bg-slate-100 rounded-lg">传播口径梳理</span>
+                    <span class="skill-tag px-3 py-1 bg-slate-100 rounded-lg">新媒体运营</span>
+                    <span class="skill-tag px-3 py-1 bg-slate-100 rounded-lg">新闻稿撰写</span>
+                </div>
+            </div>
+            <div class="space-y-4 reveal" style="transition-delay: 0.1s;">
+                <h5 class="font-bold flex items-center space-x-2 text-slate-900 border-b pb-2">
+                    <i data-lucide="palette" size="18" class="text-emerald-600"></i><span>视觉设计</span>
+                </h5>
+                <div class="flex flex-wrap gap-2 text-xs">
+                    <span class="skill-tag px-3 py-1 bg-slate-100 rounded-lg">Photoshop (精通)</span>
+                    <span class="skill-tag px-3 py-1 bg-slate-100 rounded-lg">Illustrator (精通)</span>
+                    <span class="skill-tag px-3 py-1 bg-slate-100 rounded-lg">CorelDRAW</span>
+                    <span class="skill-tag px-3 py-1 bg-slate-100 rounded-lg">视觉审美</span>
+                </div>
+            </div>
+            <div class="space-y-4 reveal" style="transition-delay: 0.2s;">
+                <h5 class="font-bold flex items-center space-x-2 text-slate-900 border-b pb-2">
+                    <i data-lucide="video" size="18" class="text-orange-600"></i><span>影像动效</span>
+                </h5>
+                <div class="flex flex-wrap gap-2 text-xs">
+                    <span class="skill-tag px-3 py-1 bg-slate-100 rounded-lg">Premiere (熟练)</span>
+                    <span class="skill-tag px-3 py-1 bg-slate-100 rounded-lg">After Effects (掌握)</span>
+                    <span class="skill-tag px-3 py-1 bg-slate-100 rounded-lg">视频剪辑</span>
+                </div>
+            </div>
+            <div class="space-y-4 reveal" style="transition-delay: 0.3s;">
+                <h5 class="font-bold flex items-center space-x-2 text-slate-900 border-b pb-2">
+                    <i data-lucide="box" size="18" class="text-purple-600"></i><span>升维利器</span>
+                </h5>
+                <div class="flex flex-wrap gap-2 text-xs">
+                    <span class="skill-tag px-3 py-1 bg-blue-100 text-blue-700 rounded-lg font-bold">Blender (3D建模)</span>
+                    <span class="skill-tag px-3 py-1 bg-slate-100 rounded-lg">H5交互设计</span>
+                    <span class="skill-tag px-3 py-1 bg-slate-100 rounded-lg">跨媒介策划</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-24 bg-slate-900 text-white">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h3 class="text-3xl font-bold mb-8 reveal">期待与您的品牌碰撞火花</h3>
+            <p class="text-slate-400 mb-12 reveal italic">目前身处深圳，寻找品牌宣传、文案策划等相关领域的职业挑战。</p>
+            <div class="grid md:grid-cols-2 gap-6 reveal">
+                <div class="flex items-center justify-center space-x-4 p-6 bg-white/5 rounded-xl border border-white/10 hover:bg-white/10 transition">
+                    <i data-lucide="phone" class="text-blue-400"></i>
+                    <span class="font-bold text-lg tracking-wider">157-1709-2336</span>
+                </div>
+                <div class="flex items-center justify-center space-x-4 p-6 bg-white/5 rounded-xl border border-white/10 hover:bg-white/10 transition">
+                    <i data-lucide="mail" class="text-blue-400"></i>
+                    <span class="font-bold text-lg">872081604@qq.com</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-12 bg-slate-950 text-slate-500 text-sm text-center">
+        <div class="max-w-6xl mx-auto px-6">
+            <p>© 2026 TING.KUANG | 况婷个人作品集展示</p>
+        </div>
+    </footer>
+
+    <div id="modal-xky" class="fixed inset-0 z-[100] hidden overflow-y-auto bg-white no-scrollbar">
+        <button onclick="closeModal('modal-xky')" class="fixed top-6 right-6 z-[110] p-3 bg-slate-100 hover:bg-slate-200 rounded-full transition">
+            <i data-lucide="x" class="text-slate-800"></i>
+        </button>
+        <div class="max-w-4xl mx-auto px-6 py-20">
+            <div class="mb-12 border-b pb-10">
+                <div class="text-blue-600 font-bold mb-3 italic tracking-widest uppercase">Technology Brand Reconstruction</div>
+                <h2 class="text-4xl md:text-5xl font-bold text-slate-900 mb-6">芯控源电子：品牌价值体系搭建</h2>
+                <p class="text-xl text-slate-500 leading-relaxed text-justify">在电子元器件领域，从零到一，通过将“硬件技术指标”转化为“客户价值故事”，协助品牌完成了从视觉到内容的全链路升级。</p>
+                <p class="mt-4 text-blue-600 font-bold animate-pulse">👇 点击下方卡片，查看具体板块的执行作品：</p>
+            </div>
+            <div class="space-y-12">
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div onclick="openSubModal('sub-xky-1')" class="p-8 bg-slate-50 rounded-2xl border border-slate-100 hover:border-blue-600 hover:shadow-xl transition-all cursor-pointer group">
+                        <h4 class="font-bold text-blue-700 mb-2 text-xl group-hover:translate-x-1 transition-transform">品牌战略与定位</h4>
+                        <p class="text-sm text-slate-600 text-justify mb-4">参与品牌规划，明确核心价值与主线。强化差异化，转化为打动客户的语言。</p>
+                        <span class="text-xs font-bold text-blue-500 flex items-center">点击查看详情文档 <i data-lucide="chevron-right" size="14" class="ml-1"></i></span>
+                    </div>
+                    <div onclick="openSubModal('sub-xky-2')" class="p-8 bg-slate-50 rounded-2xl border border-slate-100 hover:border-blue-600 hover:shadow-xl transition-all cursor-pointer group">
+                        <h4 class="font-bold text-blue-700 mb-2 text-xl group-hover:translate-x-1 transition-transform">内容营销与创作</h4>
+                        <p class="text-sm text-slate-600 text-justify mb-4">策划技术宣传手册、应用案例；负责官网与社交媒体运营，建立数字渠道形象。</p>
+                        <span class="text-xs font-bold text-blue-500 flex items-center">点击查看图片与视频 <i data-lucide="chevron-right" size="14" class="ml-1"></i></span>
+                    </div>
+                    <div onclick="openSubModal('sub-xky-3')" class="p-8 bg-slate-50 rounded-2xl border border-slate-100 hover:border-blue-600 hover:shadow-xl transition-all cursor-pointer group">
+                        <h4 class="font-bold text-blue-700 mb-2 text-xl group-hover:translate-x-1 transition-transform">市场推广与执行</h4>
+                        <p class="text-sm text-slate-600 text-justify mb-4">统筹展会及宣传物料；负责产品展示、展位设计对接及后期线索跟进。</p>
+                        <span class="text-xs font-bold text-blue-500 flex items-center">点击查看图片与视频 <i data-lucide="chevron-right" size="14" class="ml-1"></i></span>
+                    </div>
+                    <div onclick="openSubModal('sub-xky-4')" class="p-8 bg-slate-50 rounded-2xl border border-slate-100 hover:border-blue-600 hover:shadow-xl transition-all cursor-pointer group">
+                        <h4 class="font-bold text-blue-700 mb-2 text-xl group-hover:translate-x-1 transition-transform">整合传播与数字化</h4>
+                        <p class="text-sm text-slate-600 text-justify mb-4">管理行业媒体与KOL关系；通过SEO/SEM优化提升排名；对品牌投入ROI负责。</p>
+                        <span class="text-xs font-bold text-blue-500 flex items-center">点击查看详情图片 <i data-lucide="chevron-right" size="14" class="ml-1"></i></span>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-20 pt-10 border-t text-center"><button onclick="closeModal('modal-xky')" class="px-10 py-4 bg-slate-900 text-white rounded-full font-bold hover:bg-blue-600 transition">返回案例列表</button></div>
+        </div>
+    </div>
+
+    <div id="sub-xky-1" class="fixed inset-0 z-[120] hidden overflow-y-auto bg-slate-50 no-scrollbar">
+        <div class="max-w-5xl mx-auto px-6 py-12 h-screen flex flex-col">
+            <button onclick="closeSubModal('sub-xky-1')" class="mb-4 flex items-center text-blue-600 font-bold hover:underline shrink-0">
+                <i data-lucide="arrow-left" class="mr-2"></i> 返回芯控源主介绍
+            </button>
+            <h3 class="text-3xl font-bold mb-6 shrink-0">品牌战略与定位方案</h3>
+            
+            <div class="flex-grow w-full bg-white rounded-2xl shadow-xl border overflow-hidden relative">
+                <iframe src="assets/brand-strategy.pdf" class="w-full h-full" frameborder="0">
+                    <p>您的浏览器不支持 PDF 预览，请 <a href="assets/brand-strategy.pdf">点击此处下载文档</a>。</p>
+                </iframe>
+            </div>
+            
+            <p class="mt-4 text-slate-600 leading-relaxed text-center italic text-sm shrink-0">
+                此文档展示了品牌核心价值提炼、SLOGAN 演变方案及市场竞品对标逻辑。
+            </p>
+        </div>
+    </div>
+
+    <div id="sub-xky-2" class="fixed inset-0 z-[120] hidden overflow-y-auto bg-slate-50 no-scrollbar">
+        <div class="max-w-4xl mx-auto px-6 py-12">
+            <button onclick="closeSubModal('sub-xky-2')" class="mb-8 flex items-center text-blue-600 font-bold hover:underline">
+                <i data-lucide="arrow-left" class="mr-2"></i> 返回芯控源主介绍
+            </button>
+            <h3 class="text-3xl font-bold mb-8">内容营销与创作详情</h3>
+             <section class="mb-16">
+                <h4 class="text-xl font-bold mb-6 text-slate-700 flex items-center"><i data-lucide="link" class="mr-2"></i> 数字渠道入口</h4>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <a href="https://www.agm-mos.com/" target="_blank" class="flex items-center p-6 bg-white rounded-2xl shadow-sm border border-slate-200 hover:border-blue-600 hover:shadow-md transition group">
+                        <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center text-blue-600 mr-4 group-hover:bg-blue-600 group-hover:text-white transition"><i data-lucide="globe"></i></div>
+                        <div><div class="font-bold text-slate-900 text-lg">官方品牌网站</div><div class="text-sm text-slate-500">点击访问品牌数字化窗口</div></div>
+                    </a>
+                    <a href="https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzE5ODI2MjQ4MA==&action=getalbum&album_id=4259176865287815190&scene=126#wechat_redirect" target="_blank" class="flex items-center p-6 bg-white rounded-2xl shadow-sm border border-slate-200 hover:border-emerald-500 hover:shadow-md transition group">
+                        <div class="w-12 h-12 bg-emerald-50 rounded-xl flex items-center justify-center text-emerald-600 mr-4 group-hover:bg-emerald-600 group-hover:text-white transition"><i data-lucide="message-circle"></i></div>
+                        <div><div class="font-bold text-slate-900 text-lg">微信公众号</div><div class="text-sm text-slate-500">查看品牌深度文章与运营成果</div></div>
+                    </a>
+                </div>
+            </section>
+
+            <section>
+                <h4 class="text-xl font-bold mb-6 text-slate-700 flex items-center"><i data-lucide="book-open" class="mr-2"></i> 品牌视觉画册展示 (PDF)</h4>
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+                    <div class="group">
+                        <div class="aspect-[3/4] bg-slate-200 rounded-xl mb-3 overflow-hidden shadow-sm relative border border-slate-100">
+                            <img src="images/cover-1.jpg" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" onerror="this.src='https://via.placeholder.com/300x400?text=Brand+Culture'">
+                            <a href="assets/pdf-1.pdf" target="_blank" class="absolute inset-0 bg-blue-900/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center text-white backdrop-blur-sm">
+                                <span class="bg-white/20 px-3 py-1 rounded-full border border-white/40 text-xs">查看详情</span>
+                            </a>
+                        </div>
+                        <p class="text-sm font-bold text-slate-800 text-center">品牌宣传手册</p>
+                    </div>
+                    <div class="group">
+                        <div class="aspect-[3/4] bg-slate-200 rounded-xl mb-3 overflow-hidden shadow-sm relative border border-slate-100">
+                            <img src="images/cover-2.jpg" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" onerror="this.src='https://via.placeholder.com/300x400?text=Wireless+Charge'">
+                            <a href="assets/pdf-2.pdf" target="_blank" class="absolute inset-0 bg-blue-900/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center text-white backdrop-blur-sm">
+                                <span class="bg-white/20 px-3 py-1 rounded-full border border-white/40 text-xs">查看详情</span>
+                            </a>
+                        </div>
+                        <p class="text-sm font-bold text-slate-800 text-center">无线充</p>
+                    </div>
+                    <div class="group">
+                        <div class="aspect-[3/4] bg-slate-200 rounded-xl mb-3 overflow-hidden shadow-sm relative border border-slate-100">
+                            <img src="images/cover-3.jpg" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" onerror="this.src='https://via.placeholder.com/300x400?text=Energy+Storage'">
+                            <a href="assets/pdf-3.pdf" target="_blank" class="absolute inset-0 bg-blue-900/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center text-white backdrop-blur-sm">
+                                <span class="bg-white/20 px-3 py-1 rounded-full border border-white/40 text-xs">查看详情</span>
+                            </a>
+                        </div>
+                        <p class="text-sm font-bold text-slate-800 text-center">光伏储能</p>
+                    </div>
+                    <div class="group">
+                        <div class="aspect-[3/4] bg-slate-200 rounded-xl mb-3 overflow-hidden shadow-sm relative border border-slate-100">
+                            <img src="images/cover-4.jpg" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" onerror="this.src='https://via.placeholder.com/300x400?text=Brushless+Motor'">
+                            <a href="assets/pdf-4.pdf" target="_blank" class="absolute inset-0 bg-blue-900/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center text-white backdrop-blur-sm">
+                                <span class="bg-white/20 px-3 py-1 rounded-full border border-white/40 text-xs">查看详情</span>
+                            </a>
+                        </div>
+                        <p class="text-sm font-bold text-slate-800 text-center">无刷电机</p>
+                    </div>
+                    <div class="group">
+                        <div class="aspect-[3/4] bg-slate-200 rounded-xl mb-3 overflow-hidden shadow-sm relative border border-slate-100">
+                            <img src="images/cover-5.jpg" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" onerror="this.src='https://via.placeholder.com/300x400?text=SiC+Technology'">
+                            <a href="assets/pdf-5.pdf" target="_blank" class="absolute inset-0 bg-blue-900/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center text-white backdrop-blur-sm">
+                                <span class="bg-white/20 px-3 py-1 rounded-full border border-white/40 text-xs">查看详情</span>
+                            </a>
+                        </div>
+                        <p class="text-sm font-bold text-slate-800 text-center">碳化硅</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <div id="sub-xky-3" class="fixed inset-0 z-[120] hidden overflow-y-auto bg-slate-50 no-scrollbar">
+        <div class="max-w-4xl mx-auto px-6 py-12">
+            <button onclick="closeSubModal('sub-xky-3')" class="mb-8 flex items-center text-blue-600 font-bold hover:underline">
+                <i data-lucide="arrow-left" class="mr-2"></i> 返回芯控源主介绍
+            </button>
+            <h3 class="text-3xl font-bold mb-8">市场推广与执行详情</h3>
+            <div class="space-y-12">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="aspect-video bg-black rounded-2xl overflow-hidden shadow-xl">
+                        <video controls class="w-full h-full object-cover">
+                            <source src="videos/video-exhibition-recap.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="aspect-video bg-black rounded-2xl overflow-hidden shadow-xl">
+                        <video controls class="w-full h-full object-cover">
+                            <source src="videos/video-offline-promo.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                    <img src="images/img-exhibition-01.jpg" class="w-full aspect-[4/3] object-cover rounded-xl shadow-md border hover:scale-[1.02] transition-transform cursor-zoom-in" onerror="this.src='https://via.placeholder.com/600x450?text=Exhibition+01'">
+                    <img src="images/img-exhibition-02.jpg" class="w-full aspect-[4/3] object-cover rounded-xl shadow-md border hover:scale-[1.02] transition-transform cursor-zoom-in" onerror="this.src='https://via.placeholder.com/600x450?text=Exhibition+02'">
+                    <img src="images/img-exhibition-03.jpg" class="w-full aspect-[4/3] object-cover rounded-xl shadow-md border hover:scale-[1.02] transition-transform cursor-zoom-in" onerror="this.src='https://via.placeholder.com/600x450?text=Exhibition+03'">
+                    <img src="images/img-exhibition-04.jpg" class="w-full aspect-[4/3] object-cover rounded-xl shadow-md border hover:scale-[1.02] transition-transform cursor-zoom-in" onerror="this.src='https://via.placeholder.com/600x450?text=Exhibition+04'">
+                    <img src="images/img-exhibition-05.jpg" class="w-full aspect-[4/3] object-cover rounded-xl shadow-md border hover:scale-[1.02] transition-transform cursor-zoom-in" onerror="this.src='https://via.placeholder.com/600x450?text=Exhibition+05'">
+                    <img src="images/img-exhibition-06.jpg" class="w-full aspect-[4/3] object-cover rounded-xl shadow-md border hover:scale-[1.02] transition-transform cursor-zoom-in" onerror="this.src='https://via.placeholder.com/600x450?text=Exhibition+06'">
+                </div>
+                
+                <p class="text-slate-500 text-center text-sm italic">以上展示了展会现场布置、产品陈列及活动执行细节</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="sub-xky-4" class="fixed inset-0 z-[120] hidden overflow-y-auto bg-slate-50 no-scrollbar">
+        <div class="max-w-4xl mx-auto px-6 py-12">
+            <button onclick="closeSubModal('sub-xky-4')" class="mb-8 flex items-center text-blue-600 font-bold hover:underline">
+                <i data-lucide="arrow-left" class="mr-2"></i> 返回芯控源主介绍
+            </button>
+            <h3 class="text-3xl font-bold mb-8">整合传播与数字化详情</h3>
+            <div class="mb-12">
+                <h4 class="text-xl font-bold mb-6 text-slate-800 border-l-4 border-blue-600 pl-4">数字化媒体传播视频</h4>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="aspect-video bg-black rounded-2xl overflow-hidden shadow-lg">
+                        <video controls class="w-full h-full object-cover"><source src="videos/video-digital-a.mp4" type="video/mp4"></video>
+                    </div>
+                    <div class="aspect-video bg-black rounded-2xl overflow-hidden shadow-lg">
+                        <video controls class="w-full h-full object-cover"><source src="videos/video-digital-b.mp4" type="video/mp4"></video>
+                    </div>
+                    <div class="aspect-video bg-black rounded-2xl overflow-hidden shadow-lg">
+                        <video controls class="w-full h-full object-cover"><source src="videos/video-digital-c.mp4" type="video/mp4"></video>
+                    </div>
+                    <div class="aspect-video bg-black rounded-2xl overflow-hidden shadow-lg">
+                        <video controls class="w-full h-full object-cover"><source src="videos/video-digital-d.mp4" type="video/mp4"></video>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <h4 class="text-xl font-bold mb-6 text-slate-800 border-l-4 border-blue-600 pl-4">数字化整合成果展示</h4>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <img src="images/img-result-01.jpg" class="w-full aspect-[3/4] object-cover rounded-xl shadow-md border hover:scale-[1.02] transition" onerror="this.src='https://via.placeholder.com/600x800?text=Data+01'">
+                    <img src="images/img-result-02.jpg" class="w-full aspect-[3/4] object-cover rounded-xl shadow-md border hover:scale-[1.02] transition" onerror="this.src='https://via.placeholder.com/600x800?text=Data+02'">
+                    <img src="images/img-result-03.jpg" class="w-full aspect-[3/4] object-cover rounded-xl shadow-md border hover:scale-[1.02] transition" onerror="this.src='https://via.placeholder.com/600x800?text=Data+03'">
+                    <img src="images/img-result-04.jpg" class="w-full aspect-[3/4] object-cover rounded-xl shadow-md border hover:scale-[1.02] transition" onerror="this.src='https://via.placeholder.com/600x800?text=Data+04'">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-mysteel" class="fixed inset-0 z-[100] hidden overflow-y-auto bg-white no-scrollbar">
+        <button onclick="closeModal('modal-mysteel')" class="fixed top-6 right-6 z-[110] p-3 bg-slate-100 hover:bg-slate-200 rounded-full transition">
+            <i data-lucide="x" class="text-slate-800"></i>
+        </button>
+        <div class="max-w-4xl mx-auto px-6 py-20">
+            <div class="mb-12 border-b pb-10">
+                <div class="text-emerald-600 font-bold mb-3 italic tracking-widest uppercase">Organizational Communication & PR</div>
+                <h2 class="text-4xl md:text-5xl font-bold text-slate-900 mb-6">上海钢联 (Mysteel)：公关与多维内容运营</h2>
+                <p class="text-xl text-slate-500 leading-relaxed text-justify">
+                    在上海钢联期间，深度参与了公共关系联络、全媒体矩阵内容创作以及品牌资产的系统化管理。
+                </p>
+            </div>
+            <div class="space-y-16">
+                <section>
+                    <div class="flex items-center space-x-3 mb-8">
+                        <span class="bg-emerald-600 text-white w-10 h-10 rounded-full flex items-center justify-center font-bold">1</span>
+                        <h3 class="text-2xl font-bold">公共关系与对外联络</h3>
+                    </div>
+                    <div class="grid md:grid-cols-2 gap-6 pl-0 md:pl-12">
+                        <div class="p-6 bg-slate-50 rounded-2xl"><h4 class="font-bold text-emerald-800 mb-2">来访接待</h4><p class="text-sm text-slate-600 text-justify">协助合作平台、协会及重要客户的来访接待，树立公司声誉。</p></div>
+                        <div class="p-6 bg-slate-50 rounded-2xl"><h4 class="font-bold text-emerald-800 mb-2">项目申报辅助</h4><p class="text-sm text-slate-600 text-justify">辅助各类展会、圆桌论坛和行业研讨会开展，跟进材料准备与流程。</p></div>
+                    </div>
+                </section>
+                <section>
+                    <div class="flex items-center space-x-3 mb-8">
+                        <span class="bg-emerald-600 text-white w-10 h-10 rounded-full flex items-center justify-center font-bold">2</span>
+                        <h3 class="text-2xl font-bold">内容创作与新媒体运营</h3>
+                    </div>
+                    <div class="pl-0 md:pl-12 text-sm text-slate-600 space-y-4">
+                        <p><strong>全媒体创作：</strong>撰写新闻稿、推文及活动报道；负责视频号等社交矩阵的策划编辑。</p>
+                        <p><strong>影像采集与剪辑：</strong>负责会议活动现场拍摄及素材录制，独立制作适合多渠道发布的短视频。</p>
+                    </div>
+                </section>
+                <section>
+                    <div class="flex items-center space-x-3 mb-8">
+                        <span class="bg-emerald-600 text-white w-10 h-10 rounded-full flex items-center justify-center font-bold">3</span>
+                        <h3 class="text-2xl font-bold">品牌体系建设与管理</h3>
+                    </div>
+                    <div class="pl-0 md:pl-12 text-sm text-slate-600 space-y-4">
+                        <p><strong>规范与执行：</strong>参与VI规范及品牌手册编制；协助推动品牌相关设计制作项目的全流程跟进。</p>
+                        <p><strong>效果评估：</strong>协助建立量化评价体系，通过数据跟踪曝光量、媒体口碑等建设成果。</p>
+                    </div>
+                </section>
+            </div>
+            <div class="mt-20 pt-10 border-t text-center"><button onclick="closeModal('modal-mysteel')" class="px-10 py-4 bg-slate-900 text-white rounded-full font-bold hover:bg-emerald-600 transition">返回案例列表</button></div>
+        </div>
+    </div>
+
+    <div id="modal-gaoan" class="fixed inset-0 z-[100] hidden overflow-y-auto bg-white no-scrollbar">
+        <button onclick="closeModal('modal-gaoan')" class="fixed top-6 right-6 z-[110] p-3 bg-slate-100 hover:bg-slate-200 rounded-full transition">
+            <i data-lucide="x" class="text-slate-800"></i>
+         </button>
+        <div class="max-w-4xl mx-auto px-6 py-20">
+            <div class="mb-12 border-b pb-10">
+                <div class="text-red-700 font-bold mb-3 italic tracking-widest uppercase">Governmental Publicity & Integration</div>
+                <h2 class="text-4xl md:text-5xl font-bold text-slate-900 mb-6">高安市委宣传部：政务宣传与舆情管控</h2>
+                <p class="text-xl text-slate-500 leading-relaxed text-justify">
+                    在宣传部期间，参与统筹融媒体内容生产，强化对外宣传影响力，并协助建立了完善的舆情监测与内部协调机制。
+                </p>
+            </div>
+
+            <div class="space-y-16">
+                <section>
+                    <div class="flex items-center space-x-3 mb-8">
+                        <span class="bg-red-700 text-white w-10 h-10 rounded-full flex items-center justify-center font-bold">1</span>
+                        <h3 class="text-2xl font-bold text-slate-800">核心内容生产</h3>
+                    </div>
+                    <div class="pl-0 md:pl-12 space-y-8">
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div class="p-6 bg-slate-50 rounded-2xl">
+                                <h4 class="font-bold text-red-900 mb-2">政务新闻与深度报道</h4>
+                                <ul class="text-sm text-slate-600 space-y-1 list-disc pl-4">
+                                    <li>准确规范报道重要会议、调研及政策发布。</li>
+                                    <li>产业聚焦：挖掘物流之都转型、腐竹传统工艺及建陶升级。</li>
+                                    <li>文化/乡村：围绕青花瓷、采茶戏及辣椒等特色策划专题。</li>
+                                </ul>
+                            </div>
+                            <div class="p-6 bg-slate-50 rounded-2xl">
+                                <h4 class="font-bold text-red-900 mb-2">新媒体与视觉创作</h4>
+                                <ul class="text-sm text-slate-600 space-y-1 list-disc pl-4">
+                                    <li>策划拍摄反映城市风貌与政策解读的短视频。</li>
+                                    <li>图解/H5：将报告制作成易懂的一图看懂或互动页面。</li>
+                                    <li>视觉：为节日及重要活动设计精美海报。</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section>
+                    <div class="flex items-center space-x-3 mb-8">
+                        <span class="bg-red-700 text-white w-10 h-10 rounded-full flex items-center justify-center font-bold">2</span>
+                        <h3 class="text-2xl font-bold text-slate-800">平台运营与管理</h3>
+                    </div>
+                    <div class="pl-0 md:pl-12 grid md:grid-cols-3 gap-6 text-sm text-slate-600">
+                        <div class="space-y-2">
+                            <h5 class="font-bold text-slate-900 flex items-center"><i data-lucide="share-2" class="mr-1" size="16"></i> 矩阵运营</h5>
+                            <p>负责“高品高安”公众号、微博、抖音等全平台编辑排版及粉丝互动。</p>
+                        </div>
+                        <div class="space-y-2">
+                            <h5 class="font-bold text-slate-900 flex items-center"><i data-lucide="radio" class="mr-1" size="16"></i> 传统媒体联络</h5>
+                            <p>协调市融媒体中心素材报送与联合采访，保持紧密沟通。</p>
+                        </div>
+                        <div class="space-y-2">
+                            <h5 class="font-bold text-slate-900 flex items-center"><i data-lucide="check-square" class="mr-1" size="16"></i> 审核与校对</h5>
+                            <p>建立三审三校制度，确保政治正确、事实准确及文字无误。</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section>
+                    <div class="flex items-center space-x-3 mb-8">
+                        <span class="bg-red-700 text-white w-10 h-10 rounded-full flex items-center justify-center font-bold">3</span>
+                        <h3 class="text-2xl font-bold text-slate-800">舆情监控与引导</h3>
+                    </div>
+                    <div class="pl-0 md:pl-12 text-sm text-slate-600 space-y-4">
+                        <div class="flex flex-col md:flex-row gap-8">
+                            <div class="flex-1 bg-red-50 p-6 rounded-2xl border-l-4 border-red-700">
+                                <p class="font-bold text-red-900 mb-1">日常监测与研判</p>
+                                <p>利用专业工具巡查本地论坛及社媒，及时发现敏感苗头，按程序上报性质与热度。</p>
+                            </div>
+                            <div class="flex-1 bg-red-50 p-6 rounded-2xl border-l-4 border-red-700">
+                                <p class="font-bold text-red-900 mb-1">网络评论与引导</p>
+                                <p>作为评论员组织正向引导，澄清事实，理性发声以对冲负面信息。</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section>
+                    <div class="flex items-center space-x-3 mb-8">
+                        <span class="bg-red-700 text-white w-10 h-10 rounded-full flex items-center justify-center font-bold">4</span>
+                        <h3 class="text-2xl font-bold text-slate-800">对外宣传与形象塑造</h3>
+                    </div>
+                    <div class="pl-0 md:pl-12 grid grid-cols-1 md:grid-cols-2 gap-8 text-sm text-slate-600">
+                        <div class="flex items-start space-x-3">
+                            <i data-lucide="globe" class="text-red-700 shrink-0"></i>
+                            <p><strong>上级对接：</strong>积极与人民日报、新华社、江西日报等省级以上媒体沟通，推广高安好典型。</p>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <i data-lucide="mic-2" class="text-red-700 shrink-0"></i>
+                            <p><strong>活动策划：</strong>策划丰收节、陶瓷采购节宣传方案；组织新闻发布会与媒体见面会。</p>
+                        </div>
+                        <div class="flex items-start space-x-3 md:col-span-2">
+                            <i data-lucide="image" class="text-red-700 shrink-0"></i>
+                            <p><strong>外宣品制作：</strong>参与策划城市宣传片、画册及文创产品，赋能招商引资与交流。</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="bg-slate-900 text-white p-8 md:p-12 rounded-[3rem]">
+                    <h4 class="text-2xl font-bold mb-8 italic text-red-400">综合协调与内部建设 (后台支撑)</h4>
+                    <div class="grid md:grid-cols-2 gap-x-12 gap-y-8 text-sm text-slate-300">
+                        <div class="space-y-1">
+                            <p class="font-bold text-white">通讯员网络与培训</p>
+                            <p>组建全市新闻线索网络，定期组织业务培训提升基层供稿力。</p>
+                        </div>
+                        <div class="space-y-1">
+                            <p class="font-bold text-white">考核、档案与台账</p>
+                            <p>统计发稿情况建立工作台账，对重要稿件、影音资料进行归档建库。</p>
+                        </div>
+                        <div class="space-y-1 md:col-span-2">
+                            <p class="font-bold text-white flex items-center"><i data-lucide="alert-triangle" class="mr-2 text-red-500" size="18"></i> 突发应急宣传</p>
+                            <p>在自然灾害或公共事件中，迅速参与信息发布、辟谣及科普引导。</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <div class="mt-20 pt-10 border-t text-center">
+                <button onclick="closeModal('modal-gaoan')" class="px-10 py-4 bg-slate-900 text-white rounded-full font-bold hover:bg-red-700 transition shadow-xl">
+                    返回案例列表
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 初始化图标
+        lucide.createIcons();
+
+        // 滚动显示动画
+        const reveals = document.querySelectorAll('.reveal');
+        const revealOnScroll = () => {
+            const windowHeight = window.innerHeight;
+            reveals.forEach(el => {
+                const elementTop = el.getBoundingClientRect().top;
+                if (elementTop < windowHeight - 100) el.classList.add('active');
+            });
+        };
+        window.addEventListener('scroll', revealOnScroll);
+        revealOnScroll();
+
+        // 基础弹窗控制 (主层)
+        function openModal(modalId) {
+            document.getElementById(modalId).classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+            lucide.createIcons();
+        }
+        function closeModal(modalId) {
+            document.getElementById(modalId).classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        // 子级详情弹窗控制
+        function openSubModal(subId) {
+            document.getElementById(subId).classList.remove('hidden');
+            lucide.createIcons();
+        }
+        function closeSubModal(subId) {
+            document.getElementById(subId).classList.add('hidden');
+        }
+
+        // 锚点平滑跳转
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) targetElement.scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+    </script>
+</body>
+</html>
